@@ -20,14 +20,21 @@
 
 
 # Body
-
+def count(word, letter):
+    count = 0
+    for letters in word:
+        if letters == letter:
+            count += 1
+    return count
 
 ###############################################################################
 def main():
 
     # Remove print("Hello World!") and add several functions calls to count()
     # below, passing various strings and letters
-    print("Hello World!")
+	print(count('Mississippi', 'i'))
+	print(count('Oklahoma', 'i')) 
+	print(count('California', 'i'))	
 
 
 if __name__ == '__main__':

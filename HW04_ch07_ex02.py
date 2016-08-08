@@ -21,15 +21,28 @@
 
 ###############################################################################
 # Imports
-
+import math
 
 # Body
-
+def eval_loop():
+	problem = ''
+	while True:
+		try:
+			while problem != 'done':
+				problem = input('What do you want to evaluate?>')
+				result = eval(problem)
+				if problem == 'done':
+					return
+				print(result)
+			print("You're done!")
+			print("Your last result was", result)
+			break
+		except:
+			print('Only use operands and operators!') #How do I prevent this from printing once I input 'done'?
 
 ###############################################################################
 def main():
-    pass  # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+    eval_loop()
 
 if __name__ == '__main__':
     main()
